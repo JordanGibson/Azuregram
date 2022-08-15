@@ -1,0 +1,67 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Comment {
+  id         Int    @id @default(autoincrement())
+  content    String
+  postId     Int
+  authorId   Int
+  parentPost Post   @relation(fields: [postId], references: [id])
+  author     User   @relation(fields: [authorId], references: [id])
+}
+
+model Media {
+  id   Int       @id @default(autoincrement())
+  type MediaType @default(IMAGE)
+  url  String    @db.VarChar(255)
+  Post Post[]
+  User User[]
+}
+
+model Post {
+  id       Int       @id @default(autoincrement())
+  authorId Int
+  caption  String    @db.VarChar(255)
+  mediaId  Int
+  author   User      @relation(fields: [authorId], references: [id])
+  media    Media     @relation(fields: [mediaId], references: [id])
+  comments Comment[]
+}
+
+model User {
+  id               Int       @id @default(autoincrement())
+  username         String
+  email            String    @unique
+  password         String
+  firstName        String?
+  lastName         String?
+  avatarId         Int
+  role             Role      @default(USER)
+  avatar           Media     @relation(fields: [avatarId], references: [id])
+  authoredComments Comment[]
+  posts            Post[]
+  Session          Session[]
+}
+
+model Session {
+  userId Int      @unique
+  user   User     @relation(fields: [userId], references: [id])
+  token  String
+  expiry DateTime @default(dbgenerated("NOW() + interval '1 hour'"))
+}
+
+enum MediaType {
+  IMAGE
+  VIDEO
+}
+
+enum Role {
+  USER
+  ADMIN
+}
