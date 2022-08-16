@@ -1,6 +1,6 @@
 import type { Media, Prisma, Session, User } from '@prisma/client';
 import { randomUUID } from 'crypto';
-import { now } from 'lodash';
+import _ from 'lodash';
 import prisma from '../../../prisma/client';
 
 export async function getUser(user: number | string): Promise<User | null> {
@@ -38,7 +38,7 @@ export async function getSession(session_token: string): Promise<UserSession | n
 }
 
 async function clearAllExistingOrExpiredUserSessions(userId: number) {
-	const time = new Date(now());
+	const time = new Date(_.now());
 	await prisma.session.deleteMany({
 		where: {
 			OR: [{ userId: { equals: userId } }, { expiry: { lt: time } }]
