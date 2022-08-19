@@ -67,4 +67,4 @@ jobs:
           app-name: 'azuregram'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F5FA9BDB100541BE9C3CA061DD926FF1 }}
-          package: .
+          package: build
