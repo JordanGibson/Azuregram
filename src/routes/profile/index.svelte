@@ -1,6 +1,6 @@
 <script lang="ts" context="module">
 	import type { User } from '@prisma/client';
-	import { responses } from '../auth/_responses';
+	import { responses } from '../auth/_responses.js';
 	let user: User;
 	export async function load({ session }) {
 		if (!session?.user) {

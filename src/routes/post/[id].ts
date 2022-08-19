@@ -1,5 +1,5 @@
 import { Prisma } from '@prisma/client';
-import prisma from '../../../prisma/client';
+import prisma from '../../../prisma/client.js';
 
 export async function GET({ params }) {
 	const post = await prisma.post.findFirstOrThrow({

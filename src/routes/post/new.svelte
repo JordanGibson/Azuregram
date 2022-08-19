@@ -1,10 +1,10 @@
 <script lang="ts" context="module">
 	import IconInput from '$lib/IconInput.svelte';
 	import { Label } from 'flowbite-svelte';
-	import type { UserWithAvatar } from 'prisma/types';
+	import type { UserWithAvatar } from 'prisma/types.js';
 	import { Chat } from 'svelte-heros';
-	import { uploadFileAsBlob } from '../../azure/BlobService';
-	import { responses } from '../auth/_responses';
+	import { uploadFileAsBlob } from '../../azure/BlobService.js';
+	import { responses } from '../auth/_responses.js';
 
 	let user: UserWithAvatar;
 

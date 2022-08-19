@@ -1,6 +1,6 @@
-import prisma from '../../../prisma/client';
-import { createSession as createSessionForUser } from './_auth';
-import { responses } from './_responses';
+import prisma from '../../../prisma/client.js';
+import { createSession as createSessionForUser } from './_auth.js';
+import { responses } from './_responses.js';
 
 export async function POST({ request }) {
 	const { firstName, lastName, username, email, hashedPassword, avatarUrl } = await request.json();

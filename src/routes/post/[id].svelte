@@ -3,7 +3,7 @@
 
 	import Avatar from '$lib/Avatar.svelte';
 	import type { Media, Post } from '@prisma/client';
-	import type { CommentWithAuthor, UserWithAvatar } from 'prisma/types';
+	import type { CommentWithAuthor, UserWithAvatar } from 'prisma/types.js';
 	import { PaperAirplane } from 'svelte-heros';
 	import UserPost from '../../lib/UserPost.svelte';
 

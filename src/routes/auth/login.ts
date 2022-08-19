@@ -1,5 +1,5 @@
-import { createSession, getUser } from './_auth';
-import { responses } from './_responses';
+import { createSession, getUser } from './_auth.js';
+import { responses } from './_responses.js';
 
 export async function POST({ request }) {
 	const { email, hashedPassword } = await request.json();

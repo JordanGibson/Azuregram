@@ -1,7 +1,7 @@
 import type { Media, Prisma, Session, User } from '@prisma/client';
 import { randomUUID } from 'crypto';
 import _ from 'lodash';
-import prisma from '../../../prisma/client';
+import prisma from '../../../prisma/client.js';
 
 export async function getUser(user: number | string): Promise<User | null> {
 	return await prisma.user.findFirst({

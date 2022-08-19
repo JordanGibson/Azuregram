@@ -1,4 +1,4 @@
-import prisma from '../../../prisma/client';
+import prisma from '../../../prisma/client.js';
 export async function POST({ locals, request }) {
 	const user = locals.session.user;
 	const { url, caption } = await request.json();

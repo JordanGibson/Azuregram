@@ -3,7 +3,7 @@
 
 	import UserPost from '$lib/UserPost.svelte';
 	import type { Media, Post } from '@prisma/client';
-	import type { CommentWithAuthor, UserWithAvatar } from 'prisma/types';
+	import type { CommentWithAuthor, UserWithAvatar } from 'prisma/types.js';
 
 	export let posts: (Post & {
 		author: UserWithAvatar;

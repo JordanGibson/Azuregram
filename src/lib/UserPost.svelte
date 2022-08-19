@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Avatar from '$lib/Avatar.svelte';
-	import type { UserWithAvatar } from 'prisma/types';
+	import type { UserWithAvatar } from 'prisma/types.js';
 
 	export let user: UserWithAvatar;
 	export let url: string;

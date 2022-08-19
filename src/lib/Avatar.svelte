@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { UserWithAvatar } from 'prisma/types';
+	import type { UserWithAvatar } from 'prisma/types.js';
 
 	export let user: UserWithAvatar;
 </script>

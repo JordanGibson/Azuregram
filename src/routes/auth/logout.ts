@@ -1,4 +1,4 @@
-import prisma from '../../../prisma/client';
+import prisma from '../../../prisma/client.js';
 export async function POST({ locals }) {
 	const userId = Number(locals.session.user.id);
 	await prisma.session.delete({

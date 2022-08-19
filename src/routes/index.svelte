@@ -2,7 +2,7 @@
 	import { goto } from '$app/navigation';
 	import Login from '$lib/LoginCard.svelte';
 	import Register from '$lib/Register.svelte';
-	import { responses } from './auth/_responses';
+	import { responses } from './auth/_responses.js';
 
 	export async function load({ session }) {
 		const user = session?.user;

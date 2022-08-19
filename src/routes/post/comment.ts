@@ -1,4 +1,4 @@
-import prisma from '../../../prisma/client';
+import prisma from '../../../prisma/client.js';
 
 export async function POST({ request, locals }) {
 	const { comment, postId } = await request.json();

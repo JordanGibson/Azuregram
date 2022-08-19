@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { faker } from '@faker-js/faker';
-	import { uploadFileAsBlob as uploadAvatar } from '../azure/BlobService';
+	import { uploadFileAsBlob as uploadAvatar } from '../azure/BlobService.js';
 
 	import { Label } from 'flowbite-svelte';
 	import { sha256 } from 'js-sha256';
