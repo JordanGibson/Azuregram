@@ -23,6 +23,13 @@ jobs:
         with:
           node-version: '16.x'
 
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7.9.1
+          run_install: |
+            - recursive: true
+              args: [--frozen-lockfile, --strict-peer-dependencies]
+
       - name: npm install, build, and test
         run: |
           pnpm install
