@@ -34,6 +34,7 @@ jobs:
         run: |
           pnpm install
           pnpm run build
+          mv node_modules build/node_modules
           mv package.json build/package.json
           zip -r release.zip build
 
