@@ -33,7 +33,7 @@ jobs:
       - name: npm install, build, and test
         run: |
           pnpm install
-          pnpm run build --if-present
+          pnpm run build
           mv package.json build/package.json
           zip release.zip build/**/**
 
