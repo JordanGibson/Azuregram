@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/cdcbf5bf-d5ed-490f-8100-a53d84dc702e/microsoft.web/sites/subscriptions/cdcbf5bf-d5ed-490f-8100-a53d84dc702e/resourceGroups/azuregram/providers/Microsoft.Web/sites/azuregram",
+    "appService.deploySubpath": "."
+}
