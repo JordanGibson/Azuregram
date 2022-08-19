@@ -23,7 +23,6 @@
 					'Content-Type': 'application/json'
 				}
 			});
-			console.log(res);
 			if (res.ok) {
 				dispatch('success');
 			} else {

@@ -1,7 +1,6 @@
 import prisma from '../../../prisma/client';
 
 export async function POST({ request, locals }) {
-	console.log({ locals });
 	const { comment, postId } = await request.json();
 	const authorId = locals.session.user.id;
 	const created = await prisma.comment.create({

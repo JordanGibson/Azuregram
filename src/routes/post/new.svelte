@@ -52,7 +52,6 @@
 				})
 			});
 			if (response.ok) {
-				console.log(response);
 				goto('/post/' + (await response.json()).id);
 			}
 		}

@@ -2,15 +2,12 @@
 	import { goto } from '$app/navigation';
 	import Login from '$lib/LoginCard.svelte';
 	import Register from '$lib/Register.svelte';
+	import { responses } from './auth/_responses';
 
 	export async function load({ session }) {
 		const user = session?.user;
-		console.log(user);
 		if (user) {
-			return {
-				redirect: '/feed',
-				status: 303
-			};
+			return responses[300].redirectToFeed;
 		}
 	}
 </script>

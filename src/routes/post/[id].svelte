@@ -16,7 +16,6 @@
 	async function postComment() {
 		let commentLeft = comment;
 		comment = '';
-		console.log('postComment');
 		const response = await fetch('/post/comment', {
 			method: 'POST',
 			body: JSON.stringify({
@@ -24,7 +23,6 @@
 				postId: post.id
 			})
 		});
-		console.log(response);
 		if (response.ok) {
 			await invalidate('/post/' + post.id);
 		}

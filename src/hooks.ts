@@ -8,13 +8,9 @@ export const handle: Handle = async ({ event, resolve }) => {
 		const session = await getSessionFromApi(cookies.session_id);
 		if (session) {
 			event.locals.session = session;
-			return resolve(event);
 		}
 	}
-	if (event.url.pathname == '/' || event.url.pathname.startsWith('/auth')) {
-		return resolve(event);
-	}
-	return Response.redirect(event.url.origin, 303);
+	return resolve(event);
 };
 
 export function getSession(request) {

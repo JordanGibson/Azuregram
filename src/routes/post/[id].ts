@@ -27,7 +27,6 @@ export async function GET({ params }) {
 			}
 		}
 	});
-	console.log({ post });
 	return {
 		status: 200,
 		headers: {},

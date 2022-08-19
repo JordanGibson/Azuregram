@@ -13,7 +13,7 @@
 </script>
 
 <div
-	class="rounded border p-3 bg-white grid grid-cols-3 gap-3 h-screen"
+	class="rounded border p-3 bg-white grid grid-cols-2 gap-3 h-screen"
 	style="height:913px;overflow-y:scroll;"
 >
 	{#each posts as post}

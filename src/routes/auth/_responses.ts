@@ -28,6 +28,10 @@ export const responses = {
 		redirectToHome: {
 			status: 302,
 			redirect: '/'
+		},
+		redirectToFeed: {
+			status: 302,
+			redirect: '/feed'
 		}
 	},
 	400: {
