@@ -5,6 +5,7 @@ COPY package*.json ./
 COPY prisma ./prisma/
 RUN npm ci --only=production
 RUN npx prisma generate
+RUN npm run build
 COPY . .
 EXPOSE 8080
 CMD ["npm", "start"]
