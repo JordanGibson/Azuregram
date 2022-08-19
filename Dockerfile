@@ -4,8 +4,8 @@ ENV DATABASE_URL=postgres://postgres:Password1@azuregramdb.postgres.database.azu
 RUN npm i -g pnpm
 COPY package*.json ./
 COPY prisma ./prisma/
-RUN pnpm ci --only=production
-RUN pnpx prisma generate
+RUN npm ci --only=production
+RUN npx prisma generate
 RUN pnpm run
 COPY . .
 EXPOSE 8080
