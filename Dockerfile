@@ -5,7 +5,7 @@ ENV PORT=8000
 COPY package*.json ./
 COPY prisma ./prisma/
 COPY . .
-RUN npm ci --only=production
+RUN npm ci
 RUN npx prisma generate
 RUN npm run build
 EXPOSE 8000
